@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		668334BA2AC97B2C00D4A820 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668334B92AC97B2C00D4A820 /* FeedCell.swift */; };
 		66F789792AC91EAD00A266D7 /* BeRealCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F789782AC91EAD00A266D7 /* BeRealCloneApp.swift */; };
 		66F7897B2AC91EAD00A266D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7897A2AC91EAD00A266D7 /* ContentView.swift */; };
 		66F7897D2AC91EAD00A266D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F7897C2AC91EAD00A266D7 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 		66F7898B2AC91EAE00A266D7 /* BeRealCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7898A2AC91EAE00A266D7 /* BeRealCloneTests.swift */; };
 		66F789952AC91EAE00A266D7 /* BeRealCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F789942AC91EAE00A266D7 /* BeRealCloneUITests.swift */; };
 		66F789972AC91EAE00A266D7 /* BeRealCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F789962AC91EAE00A266D7 /* BeRealCloneUITestsLaunchTests.swift */; };
+		66F789A62AC91FF100A266D7 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F789A52AC91FF100A266D7 /* Feed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		668334B92AC97B2C00D4A820 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		66F789752AC91EAD00A266D7 /* BeRealClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeRealClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F789782AC91EAD00A266D7 /* BeRealCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeRealCloneApp.swift; sourceTree = "<group>"; };
 		66F7897A2AC91EAD00A266D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		66F789902AC91EAE00A266D7 /* BeRealCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeRealCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F789942AC91EAE00A266D7 /* BeRealCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeRealCloneUITests.swift; sourceTree = "<group>"; };
 		66F789962AC91EAE00A266D7 /* BeRealCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeRealCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		66F789A52AC91FF100A266D7 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				66F7897C2AC91EAD00A266D7 /* Assets.xcassets */,
 				66F7897E2AC91EAD00A266D7 /* BeRealClone.entitlements */,
 				66F7897F2AC91EAD00A266D7 /* Preview Content */,
+				66F789A52AC91FF100A266D7 /* Feed.swift */,
+				668334B92AC97B2C00D4A820 /* FeedCell.swift */,
 			);
 			path = BeRealClone;
 			sourceTree = "<group>";
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				66F7897B2AC91EAD00A266D7 /* ContentView.swift in Sources */,
+				668334BA2AC97B2C00D4A820 /* FeedCell.swift in Sources */,
+				66F789A62AC91FF100A266D7 /* Feed.swift in Sources */,
 				66F789792AC91EAD00A266D7 /* BeRealCloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
