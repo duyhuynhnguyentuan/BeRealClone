@@ -35,6 +35,7 @@ struct Feed: View {
                                 .foregroundColor(.gray)
                         }
                     }
+               
                     Spacer()
                 }
             }
