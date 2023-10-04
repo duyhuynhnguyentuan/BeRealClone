@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66681FD72ACDB92D001036E9 /* MemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66681FD62ACDB92D001036E9 /* MemoryView.swift */; };
 		66788A862ACC73CB004AB5A4 /* ThreeDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66788A852ACC73CB004AB5A4 /* ThreeDots.swift */; };
+		66788A882ACC7CD4004AB5A4 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66788A872ACC7CD4004AB5A4 /* Profile.swift */; };
 		668334BA2AC97B2C00D4A820 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668334B92AC97B2C00D4A820 /* FeedCell.swift */; };
 		66F789792AC91EAD00A266D7 /* BeRealCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F789782AC91EAD00A266D7 /* BeRealCloneApp.swift */; };
 		66F7897B2AC91EAD00A266D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7897A2AC91EAD00A266D7 /* ContentView.swift */; };
@@ -37,7 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66681FD62ACDB92D001036E9 /* MemoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryView.swift; sourceTree = "<group>"; };
 		66788A852ACC73CB004AB5A4 /* ThreeDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDots.swift; sourceTree = "<group>"; };
+		66788A872ACC7CD4004AB5A4 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		668334B92AC97B2C00D4A820 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		66F789752AC91EAD00A266D7 /* BeRealClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeRealClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F789782AC91EAD00A266D7 /* BeRealCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeRealCloneApp.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				66F7897F2AC91EAD00A266D7 /* Preview Content */,
 				66F789A52AC91FF100A266D7 /* Feed.swift */,
 				668334B92AC97B2C00D4A820 /* FeedCell.swift */,
+				66788A872ACC7CD4004AB5A4 /* Profile.swift */,
+				66681FD62ACDB92D001036E9 /* MemoryView.swift */,
 			);
 			path = BeRealClone;
 			sourceTree = "<group>";
@@ -276,7 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66681FD72ACDB92D001036E9 /* MemoryView.swift in Sources */,
 				66F7897B2AC91EAD00A266D7 /* ContentView.swift in Sources */,
+				66788A882ACC7CD4004AB5A4 /* Profile.swift in Sources */,
 				66788A862ACC73CB004AB5A4 /* ThreeDots.swift in Sources */,
 				668334BA2AC97B2C00D4A820 /* FeedCell.swift in Sources */,
 				66F789A62AC91FF100A266D7 /* Feed.swift in Sources */,
