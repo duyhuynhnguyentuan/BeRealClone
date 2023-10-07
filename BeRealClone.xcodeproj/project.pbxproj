@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		663A42382AD11C18005E0027 /* TimeZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663A42372AD11C18005E0027 /* TimeZoneView.swift */; };
 		66681FD72ACDB92D001036E9 /* MemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66681FD62ACDB92D001036E9 /* MemoryView.swift */; };
 		66788A862ACC73CB004AB5A4 /* ThreeDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66788A852ACC73CB004AB5A4 /* ThreeDots.swift */; };
 		66788A882ACC7CD4004AB5A4 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66788A872ACC7CD4004AB5A4 /* Profile.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		663A42372AD11C18005E0027 /* TimeZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneView.swift; sourceTree = "<group>"; };
 		66681FD62ACDB92D001036E9 /* MemoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryView.swift; sourceTree = "<group>"; };
 		66788A852ACC73CB004AB5A4 /* ThreeDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDots.swift; sourceTree = "<group>"; };
 		66788A872ACC7CD4004AB5A4 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				66681FD62ACDB92D001036E9 /* MemoryView.swift */,
 				669B99762ACF05D800ABA88A /* Settings.swift */,
 				668785DF2AD02B0400070035 /* EditProfile.swift */,
+				663A42372AD11C18005E0027 /* TimeZoneView.swift */,
 			);
 			path = BeRealClone;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				66681FD72ACDB92D001036E9 /* MemoryView.swift in Sources */,
 				66F7897B2AC91EAD00A266D7 /* ContentView.swift in Sources */,
 				669B99772ACF05D800ABA88A /* Settings.swift in Sources */,
+				663A42382AD11C18005E0027 /* TimeZoneView.swift in Sources */,
 				66788A882ACC7CD4004AB5A4 /* Profile.swift in Sources */,
 				66788A862ACC73CB004AB5A4 /* ThreeDots.swift in Sources */,
 				668785E42AD0373A00070035 /* Extensions.swift in Sources */,
