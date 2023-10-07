@@ -11,6 +11,9 @@
 		66681FD72ACDB92D001036E9 /* MemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66681FD62ACDB92D001036E9 /* MemoryView.swift */; };
 		66788A862ACC73CB004AB5A4 /* ThreeDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66788A852ACC73CB004AB5A4 /* ThreeDots.swift */; };
 		66788A882ACC7CD4004AB5A4 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66788A872ACC7CD4004AB5A4 /* Profile.swift */; };
+		6678B92E2AD160D9005F8A8E /* LeftMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6678B92D2AD160D9005F8A8E /* LeftMenu.swift */; };
+		6678B9302AD16305005F8A8E /* LeftMenuTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6678B92F2AD16305005F8A8E /* LeftMenuTopView.swift */; };
+		6678B9332AD164BD005F8A8E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6678B9322AD164BD005F8A8E /* SearchBar.swift */; };
 		668334BA2AC97B2C00D4A820 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668334B92AC97B2C00D4A820 /* FeedCell.swift */; };
 		668785E02AD02B0400070035 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668785DF2AD02B0400070035 /* EditProfile.swift */; };
 		668785E42AD0373A00070035 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668785E32AD0373A00070035 /* Extensions.swift */; };
@@ -47,6 +50,9 @@
 		66681FD62ACDB92D001036E9 /* MemoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryView.swift; sourceTree = "<group>"; };
 		66788A852ACC73CB004AB5A4 /* ThreeDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDots.swift; sourceTree = "<group>"; };
 		66788A872ACC7CD4004AB5A4 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		6678B92D2AD160D9005F8A8E /* LeftMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenu.swift; sourceTree = "<group>"; };
+		6678B92F2AD16305005F8A8E /* LeftMenuTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuTopView.swift; sourceTree = "<group>"; };
+		6678B9322AD164BD005F8A8E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		668334B92AC97B2C00D4A820 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		668785DF2AD02B0400070035 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
 		668785E32AD0373A00070035 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -98,6 +104,23 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		6678B92C2AD16098005F8A8E /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6678B92D2AD160D9005F8A8E /* LeftMenu.swift */,
+				6678B92F2AD16305005F8A8E /* LeftMenuTopView.swift */,
+			);
+			path = LeftMenu;
+			sourceTree = "<group>";
+		};
+		6678B9312AD1649E005F8A8E /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				6678B9322AD164BD005F8A8E /* SearchBar.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
 		668785E22AD0372200070035 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +152,8 @@
 		66F789772AC91EAD00A266D7 /* BeRealClone */ = {
 			isa = PBXGroup;
 			children = (
+				6678B9312AD1649E005F8A8E /* Items */,
+				6678B92C2AD16098005F8A8E /* LeftMenu */,
 				668785E22AD0372200070035 /* Extensions */,
 				66788A842ACC73AF004AB5A4 /* Helpers */,
 				66F789782AC91EAD00A266D7 /* BeRealCloneApp.swift */,
@@ -307,6 +332,9 @@
 				669B99772ACF05D800ABA88A /* Settings.swift in Sources */,
 				663A42382AD11C18005E0027 /* TimeZoneView.swift in Sources */,
 				66788A882ACC7CD4004AB5A4 /* Profile.swift in Sources */,
+				6678B9302AD16305005F8A8E /* LeftMenuTopView.swift in Sources */,
+				6678B92E2AD160D9005F8A8E /* LeftMenu.swift in Sources */,
+				6678B9332AD164BD005F8A8E /* SearchBar.swift in Sources */,
 				66788A862ACC73CB004AB5A4 /* ThreeDots.swift in Sources */,
 				668785E42AD0373A00070035 /* Extensions.swift in Sources */,
 				668334BA2AC97B2C00D4A820 /* FeedCell.swift in Sources */,

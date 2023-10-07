@@ -139,7 +139,7 @@ struct TimeZoneView: View {
                                         .foregroundColor(.gray)
                                 }
                                 Button{
-                                    self.area = "west.asia"
+                                    self.area = "westasia"
                                 } label: {
                                     HStack{
                                         Image(systemName: "globe.americas.fill")

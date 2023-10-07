@@ -13,7 +13,7 @@ struct ContentView: View {
         UITextView.appearance().backgroundColor = .clear
     }
     var body: some View {
-       EditProfile()
+       LeftMenu()
     }
 }
 
