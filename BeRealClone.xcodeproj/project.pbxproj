@@ -22,6 +22,7 @@
 		66F0F01D2AD1ACA000B94A64 /* SuggestionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F0F01C2AD1ACA000B94A64 /* SuggestionCellView.swift */; };
 		66F0F01F2AD1B1E300B94A64 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F0F01E2AD1B1E300B94A64 /* FriendsView.swift */; };
 		66F0F0212AD1B37600B94A64 /* FriendCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F0F0202AD1B37600B94A64 /* FriendCellView.swift */; };
+		66F0F0232AD1B59700B94A64 /* RequestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F0F0222AD1B59700B94A64 /* RequestsView.swift */; };
 		66F789792AC91EAD00A266D7 /* BeRealCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F789782AC91EAD00A266D7 /* BeRealCloneApp.swift */; };
 		66F7897B2AC91EAD00A266D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7897A2AC91EAD00A266D7 /* ContentView.swift */; };
 		66F7897D2AC91EAD00A266D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F7897C2AC91EAD00A266D7 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		66F0F01C2AD1ACA000B94A64 /* SuggestionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCellView.swift; sourceTree = "<group>"; };
 		66F0F01E2AD1B1E300B94A64 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		66F0F0202AD1B37600B94A64 /* FriendCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellView.swift; sourceTree = "<group>"; };
+		66F0F0222AD1B59700B94A64 /* RequestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsView.swift; sourceTree = "<group>"; };
 		66F789752AC91EAD00A266D7 /* BeRealClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeRealClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F789782AC91EAD00A266D7 /* BeRealCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeRealCloneApp.swift; sourceTree = "<group>"; };
 		66F7897A2AC91EAD00A266D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				66F0F01C2AD1ACA000B94A64 /* SuggestionCellView.swift */,
 				66F0F01E2AD1B1E300B94A64 /* FriendsView.swift */,
 				66F0F0202AD1B37600B94A64 /* FriendCellView.swift */,
+				66F0F0222AD1B59700B94A64 /* RequestsView.swift */,
 			);
 			path = LeftMenu;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				6678B92E2AD160D9005F8A8E /* LeftMenu.swift in Sources */,
 				66F0F01F2AD1B1E300B94A64 /* FriendsView.swift in Sources */,
 				6678B9332AD164BD005F8A8E /* SearchBar.swift in Sources */,
+				66F0F0232AD1B59700B94A64 /* RequestsView.swift in Sources */,
 				66788A862ACC73CB004AB5A4 /* ThreeDots.swift in Sources */,
 				668785E42AD0373A00070035 /* Extensions.swift in Sources */,
 				668334BA2AC97B2C00D4A820 /* FeedCell.swift in Sources */,
