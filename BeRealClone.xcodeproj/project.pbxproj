@@ -30,7 +30,7 @@
 		66F7898B2AC91EAE00A266D7 /* BeRealCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7898A2AC91EAE00A266D7 /* BeRealCloneTests.swift */; };
 		66F789952AC91EAE00A266D7 /* BeRealCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F789942AC91EAE00A266D7 /* BeRealCloneUITests.swift */; };
 		66F789972AC91EAE00A266D7 /* BeRealCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F789962AC91EAE00A266D7 /* BeRealCloneUITestsLaunchTests.swift */; };
-		66F789A62AC91FF100A266D7 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F789A52AC91FF100A266D7 /* Feed.swift */; };
+		66F789A62AC91FF100A266D7 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F789A52AC91FF100A266D7 /* FeedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +78,7 @@
 		66F789902AC91EAE00A266D7 /* BeRealCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeRealCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F789942AC91EAE00A266D7 /* BeRealCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeRealCloneUITests.swift; sourceTree = "<group>"; };
 		66F789962AC91EAE00A266D7 /* BeRealCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeRealCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		66F789A52AC91FF100A266D7 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		66F789A52AC91FF100A266D7 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +176,7 @@
 				66F7897C2AC91EAD00A266D7 /* Assets.xcassets */,
 				66F7897E2AC91EAD00A266D7 /* BeRealClone.entitlements */,
 				66F7897F2AC91EAD00A266D7 /* Preview Content */,
-				66F789A52AC91FF100A266D7 /* Feed.swift */,
+				66F789A52AC91FF100A266D7 /* FeedView.swift */,
 				668334B92AC97B2C00D4A820 /* FeedCell.swift */,
 				66788A872ACC7CD4004AB5A4 /* Profile.swift */,
 				66681FD62ACDB92D001036E9 /* MemoryView.swift */,
@@ -358,7 +358,7 @@
 				66788A862ACC73CB004AB5A4 /* ThreeDots.swift in Sources */,
 				668785E42AD0373A00070035 /* Extensions.swift in Sources */,
 				668334BA2AC97B2C00D4A820 /* FeedCell.swift in Sources */,
-				66F789A62AC91FF100A266D7 /* Feed.swift in Sources */,
+				66F789A62AC91FF100A266D7 /* FeedView.swift in Sources */,
 				66F789792AC91EAD00A266D7 /* BeRealCloneApp.swift in Sources */,
 				668785E02AD02B0400070035 /* EditProfile.swift in Sources */,
 			);

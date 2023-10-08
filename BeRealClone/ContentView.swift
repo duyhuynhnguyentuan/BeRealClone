@@ -12,8 +12,29 @@ struct ContentView: View {
     init(){
         UITextView.appearance().backgroundColor = .clear
     }
+    //the below function is used to create vibrations whenever user click to other views
+    func simpleSuccess(){
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+    }
+    @State var width = UIScreen.main.bounds.width
+    @State var menu = "feed"
     var body: some View {
-       Feed()
+        NavigationView{
+            HStack(spacing: 0){
+                LeftMenu(mainMenu: $menu)
+                    .frame(width: width)
+                FeedView(mainMenu: $menu)
+                    .frame(width: width)
+                Profile(mainMenu: $menu)
+                    .frame(width: width)
+            }
+            .offset(x: menu == "left" ? width : 0)
+            .offset(x: menu == "profile" ? -(width) : 0)
+            .onChange(of: menu){ newValue in
+                simpleSuccess()
+            }
+        }
     }
 }
 

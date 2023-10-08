@@ -10,13 +10,20 @@ import SwiftUI
 struct LeftMenuTopView: View {
     @State var text = ""
     @State var isEditing = false
+    @Binding var mainMenu: String
     var body: some View {
         VStack{
             ZStack{
                 HStack{
                     Spacer()
-                    Image(systemName: "arrow.forward")
-                        .foregroundColor(.white)
+                    Button{
+                        withAnimation{
+                            self.mainMenu = "feed"
+                        }
+                    }label: {
+                        Image(systemName: "arrow.forward")
+                            .foregroundColor(.white)
+                    }
                 }
                 Text("BeReal.")
                     .foregroundColor(.white)
@@ -30,5 +37,5 @@ struct LeftMenuTopView: View {
 }
 
 #Preview {
-    LeftMenuTopView()
+    LeftMenuTopView(mainMenu: .constant("left"))
 }
