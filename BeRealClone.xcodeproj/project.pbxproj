@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		663A42382AD11C18005E0027 /* TimeZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663A42372AD11C18005E0027 /* TimeZoneView.swift */; };
 		66681FD72ACDB92D001036E9 /* MemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66681FD62ACDB92D001036E9 /* MemoryView.swift */; };
+		6669127A2AD2FA14007EF98A /* OtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666912792AD2FA14007EF98A /* OtherView.swift */; };
 		66788A862ACC73CB004AB5A4 /* ThreeDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66788A852ACC73CB004AB5A4 /* ThreeDots.swift */; };
 		66788A882ACC7CD4004AB5A4 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66788A872ACC7CD4004AB5A4 /* Profile.swift */; };
 		6678B92E2AD160D9005F8A8E /* LeftMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6678B92D2AD160D9005F8A8E /* LeftMenu.swift */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		663A42372AD11C18005E0027 /* TimeZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneView.swift; sourceTree = "<group>"; };
 		66681FD62ACDB92D001036E9 /* MemoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryView.swift; sourceTree = "<group>"; };
+		666912792AD2FA14007EF98A /* OtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherView.swift; sourceTree = "<group>"; };
 		66788A852ACC73CB004AB5A4 /* ThreeDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDots.swift; sourceTree = "<group>"; };
 		66788A872ACC7CD4004AB5A4 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		6678B92D2AD160D9005F8A8E /* LeftMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenu.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				669B99762ACF05D800ABA88A /* Settings.swift */,
 				668785DF2AD02B0400070035 /* EditProfile.swift */,
 				663A42372AD11C18005E0027 /* TimeZoneView.swift */,
+				666912792AD2FA14007EF98A /* OtherView.swift */,
 			);
 			path = BeRealClone;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				66F789A62AC91FF100A266D7 /* FeedView.swift in Sources */,
 				66F789792AC91EAD00A266D7 /* BeRealCloneApp.swift in Sources */,
 				668785E02AD02B0400070035 /* EditProfile.swift in Sources */,
+				6669127A2AD2FA14007EF98A /* OtherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
