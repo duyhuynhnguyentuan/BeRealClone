@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MemoriesView: View {
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         VStack{
             ZStack{
@@ -18,9 +19,13 @@ struct MemoriesView: View {
                             .foregroundColor(.white)
                             .fontWeight(.semibold)
                         HStack{
-                            Image(systemName: "arrow.backward")
-                                .foregroundColor(.white)
-                                .font(.system(size: 20))
+                            Button{
+                                dismiss()
+                            }label: {
+                                Image(systemName: "arrow.backward")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 20))
+                            }
                             Spacer()
                             Image(systemName: "questionmark.circle")
                                 .foregroundColor(.white)
