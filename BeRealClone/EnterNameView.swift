@@ -37,6 +37,8 @@ struct EnterNameView: View {
                             .frame(width: 210)
                             .overlay(
                                 TextField("", text: $name)
+                                //The multilineTextAlignment is used to set the alignment of the blueish thing when you click on the textfield
+                                    .multilineTextAlignment(.leading)
                                     .font(.system(size: 40, weight: .heavy))
                             )
                     }.foregroundColor(.white)
