@@ -23,6 +23,8 @@
 		668CA2502AD43F1600FD0D25 /* ContactUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CA24F2AD43F1600FD0D25 /* ContactUsView.swift */; };
 		668CA2522AD4410400FD0D25 /* MemoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CA2512AD4410400FD0D25 /* MemoriesView.swift */; };
 		668CA2542AD4545200FD0D25 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CA2532AD4545200FD0D25 /* NotificationsView.swift */; };
+		668D6B2E2AD54D7B0075780F /* NotificationsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668D6B2D2AD54D7B0075780F /* NotificationsButtonView.swift */; };
+		668D6B302AD553F20075780F /* WhiteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668D6B2F2AD553F20075780F /* WhiteButtonView.swift */; };
 		669B99772ACF05D800ABA88A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669B99762ACF05D800ABA88A /* SettingsView.swift */; };
 		66F0F01B2AD1AA9000B94A64 /* Suggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F0F01A2AD1AA9000B94A64 /* Suggestions.swift */; };
 		66F0F01D2AD1ACA000B94A64 /* SuggestionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F0F01C2AD1ACA000B94A64 /* SuggestionCellView.swift */; };
@@ -73,6 +75,8 @@
 		668CA24F2AD43F1600FD0D25 /* ContactUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsView.swift; sourceTree = "<group>"; };
 		668CA2512AD4410400FD0D25 /* MemoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesView.swift; sourceTree = "<group>"; };
 		668CA2532AD4545200FD0D25 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		668D6B2D2AD54D7B0075780F /* NotificationsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsButtonView.swift; sourceTree = "<group>"; };
+		668D6B2F2AD553F20075780F /* WhiteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButtonView.swift; sourceTree = "<group>"; };
 		669B99762ACF05D800ABA88A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		66F0F01A2AD1AA9000B94A64 /* Suggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestions.swift; sourceTree = "<group>"; };
 		66F0F01C2AD1ACA000B94A64 /* SuggestionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCellView.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				6678B9322AD164BD005F8A8E /* SearchBar.swift */,
+				668D6B2F2AD553F20075780F /* WhiteButtonView.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				668CA24F2AD43F1600FD0D25 /* ContactUsView.swift */,
 				668CA2512AD4410400FD0D25 /* MemoriesView.swift */,
 				668CA2532AD4545200FD0D25 /* NotificationsView.swift */,
+				668D6B2D2AD54D7B0075780F /* NotificationsButtonView.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66681FD72ACDB92D001036E9 /* MemoryView.swift in Sources */,
+				668D6B2E2AD54D7B0075780F /* NotificationsButtonView.swift in Sources */,
 				66F7897B2AC91EAD00A266D7 /* ContentView.swift in Sources */,
 				66F0F0212AD1B37600B94A64 /* FriendCellView.swift in Sources */,
 				669B99772ACF05D800ABA88A /* SettingsView.swift in Sources */,
@@ -390,6 +397,7 @@
 				668785E42AD0373A00070035 /* Extensions.swift in Sources */,
 				668334BA2AC97B2C00D4A820 /* FeedCell.swift in Sources */,
 				66F789A62AC91FF100A266D7 /* FeedView.swift in Sources */,
+				668D6B302AD553F20075780F /* WhiteButtonView.swift in Sources */,
 				66F789792AC91EAD00A266D7 /* BeRealCloneApp.swift in Sources */,
 				668785E02AD02B0400070035 /* EditProfileView.swift in Sources */,
 				6669127A2AD2FA14007EF98A /* OtherView.swift in Sources */,
