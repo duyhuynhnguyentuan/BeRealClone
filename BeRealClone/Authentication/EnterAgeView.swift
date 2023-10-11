@@ -46,7 +46,9 @@ struct EnterAgeView: View {
                                 .font(.system(size: 45, weight: .heavy))
                                 .multilineTextAlignment(.center)
                                 .keyboardType(.numberPad)
-                                .onReceive(Just(month), perform: { newValue in
+                                //the TextField always saves changes to the "text:" parameter whenever something typed in. But it doesn't filter the characters from the number so the below onReceive will help us do that lol
+                                .onReceive(Just(month), perform: { newValue
+                                    in
                                     let filtered = newValue.filter{
                                         Set("0123456789").contains($0)
                                         

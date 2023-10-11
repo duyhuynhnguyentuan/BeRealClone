@@ -13,12 +13,17 @@
 		66681FD72ACDB92D001036E9 /* MemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66681FD62ACDB92D001036E9 /* MemoryView.swift */; };
 		6669127A2AD2FA14007EF98A /* OtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666912792AD2FA14007EF98A /* OtherView.swift */; };
 		6669127C2AD3041E007EF98A /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6669127B2AD3041E007EF98A /* HelpView.swift */; };
+		6669C8D32AD6ACE6007BCD64 /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 6669C8D22AD6ACE6007BCD64 /* CountryPicker */; };
 		66788A862ACC73CB004AB5A4 /* ThreeDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66788A852ACC73CB004AB5A4 /* ThreeDots.swift */; };
 		66788A882ACC7CD4004AB5A4 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66788A872ACC7CD4004AB5A4 /* Profile.swift */; };
 		6678B92E2AD160D9005F8A8E /* LeftMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6678B92D2AD160D9005F8A8E /* LeftMenu.swift */; };
 		6678B9302AD16305005F8A8E /* LeftMenuTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6678B92F2AD16305005F8A8E /* LeftMenuTopView.swift */; };
 		6678B9332AD164BD005F8A8E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6678B9322AD164BD005F8A8E /* SearchBar.swift */; };
 		668334BA2AC97B2C00D4A820 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668334B92AC97B2C00D4A820 /* FeedCell.swift */; };
+		66836A462AD6CC1300A61C51 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 66836A452AD6CC1300A61C51 /* countries.json */; };
+		66836A482AD6CC9A00A61C51 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836A472AD6CC9A00A61C51 /* Country.swift */; };
+		66836A4A2AD6EACE00A61C51 /* SelectCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836A492AD6EACE00A61C51 /* SelectCountryView.swift */; };
+		66836A4D2AD6F42000A61C51 /* EnterPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836A4C2AD6F42000A61C51 /* EnterPhoneNumberView.swift */; };
 		668785E02AD02B0400070035 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668785DF2AD02B0400070035 /* EditProfileView.swift */; };
 		668785E42AD0373A00070035 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668785E32AD0373A00070035 /* Extensions.swift */; };
 		668CA24E2AD43CD500FD0D25 /* ChevronButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CA24D2AD43CD500FD0D25 /* ChevronButtonView.swift */; };
@@ -73,6 +78,10 @@
 		6678B92F2AD16305005F8A8E /* LeftMenuTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuTopView.swift; sourceTree = "<group>"; };
 		6678B9322AD164BD005F8A8E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		668334B92AC97B2C00D4A820 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		66836A452AD6CC1300A61C51 /* countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		66836A472AD6CC9A00A61C51 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		66836A492AD6EACE00A61C51 /* SelectCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCountryView.swift; sourceTree = "<group>"; };
+		66836A4C2AD6F42000A61C51 /* EnterPhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberView.swift; sourceTree = "<group>"; };
 		668785DF2AD02B0400070035 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		668785E32AD0373A00070035 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		668CA24D2AD43CD500FD0D25 /* ChevronButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChevronButtonView.swift; sourceTree = "<group>"; };
@@ -106,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6669C8D32AD6ACE6007BCD64 /* CountryPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +167,17 @@
 			path = Items;
 			sourceTree = "<group>";
 		};
+		66836A4B2AD6F3D400A61C51 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				66677E0A2AD5A6950010A13D /* EnterNameView.swift */,
+				66677E0C2AD5ADAE0010A13D /* EnterAgeView.swift */,
+				66836A492AD6EACE00A61C51 /* SelectCountryView.swift */,
+				66836A4C2AD6F42000A61C51 /* EnterPhoneNumberView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		668785E22AD0372200070035 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +225,7 @@
 		66F789772AC91EAD00A266D7 /* BeRealClone */ = {
 			isa = PBXGroup;
 			children = (
+				66836A452AD6CC1300A61C51 /* countries.json */,
 				6678B9312AD1649E005F8A8E /* Items */,
 				6678B92C2AD16098005F8A8E /* LeftMenu */,
 				668785E22AD0372200070035 /* Extensions */,
@@ -219,8 +241,8 @@
 				66681FD62ACDB92D001036E9 /* MemoryView.swift */,
 				668CA2552AD4589D00FD0D25 /* SettingsView */,
 				668CA24D2AD43CD500FD0D25 /* ChevronButtonView.swift */,
-				66677E0A2AD5A6950010A13D /* EnterNameView.swift */,
-				66677E0C2AD5ADAE0010A13D /* EnterAgeView.swift */,
+				66836A4B2AD6F3D400A61C51 /* Authentication */,
+				66836A472AD6CC9A00A61C51 /* Country.swift */,
 			);
 			path = BeRealClone;
 			sourceTree = "<group>";
@@ -266,6 +288,9 @@
 			dependencies = (
 			);
 			name = BeRealClone;
+			packageProductDependencies = (
+				6669C8D22AD6ACE6007BCD64 /* CountryPicker */,
+			);
 			productName = BeRealClone;
 			productReference = 66F789752AC91EAD00A266D7 /* BeRealClone.app */;
 			productType = "com.apple.product-type.application";
@@ -338,6 +363,9 @@
 				Base,
 			);
 			mainGroup = 66F7896C2AC91EAC00A266D7;
+			packageReferences = (
+				6669C8D12AD6ACE6007BCD64 /* XCRemoteSwiftPackageReference "CountryPicker" */,
+			);
 			productRefGroup = 66F789762AC91EAD00A266D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -354,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66836A462AD6CC1300A61C51 /* countries.json in Resources */,
 				66F789812AC91EAD00A266D7 /* Preview Assets.xcassets in Resources */,
 				66F7897D2AC91EAD00A266D7 /* Assets.xcassets in Resources */,
 			);
@@ -397,10 +426,12 @@
 				66F0F01F2AD1B1E300B94A64 /* FriendsView.swift in Sources */,
 				668CA2502AD43F1600FD0D25 /* ContactUsView.swift in Sources */,
 				6678B9332AD164BD005F8A8E /* SearchBar.swift in Sources */,
+				66836A4D2AD6F42000A61C51 /* EnterPhoneNumberView.swift in Sources */,
 				66677E0B2AD5A6950010A13D /* EnterNameView.swift in Sources */,
 				66F0F0232AD1B59700B94A64 /* RequestsView.swift in Sources */,
 				668CA24E2AD43CD500FD0D25 /* ChevronButtonView.swift in Sources */,
 				66788A862ACC73CB004AB5A4 /* ThreeDots.swift in Sources */,
+				66836A4A2AD6EACE00A61C51 /* SelectCountryView.swift in Sources */,
 				668CA2522AD4410400FD0D25 /* MemoriesView.swift in Sources */,
 				668785E42AD0373A00070035 /* Extensions.swift in Sources */,
 				668334BA2AC97B2C00D4A820 /* FeedCell.swift in Sources */,
@@ -408,6 +439,7 @@
 				668D6B302AD553F20075780F /* WhiteButtonView.swift in Sources */,
 				66F789792AC91EAD00A266D7 /* BeRealCloneApp.swift in Sources */,
 				668785E02AD02B0400070035 /* EditProfileView.swift in Sources */,
+				66836A482AD6CC9A00A61C51 /* Country.swift in Sources */,
 				6669127A2AD2FA14007EF98A /* OtherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -761,6 +793,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6669C8D12AD6ACE6007BCD64 /* XCRemoteSwiftPackageReference "CountryPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mobven/CountryPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6669C8D22AD6ACE6007BCD64 /* CountryPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6669C8D12AD6ACE6007BCD64 /* XCRemoteSwiftPackageReference "CountryPicker" */;
+			productName = CountryPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 66F7896D2AC91EAC00A266D7 /* Project object */;
 }
