@@ -24,6 +24,7 @@
 		66836A482AD6CC9A00A61C51 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836A472AD6CC9A00A61C51 /* Country.swift */; };
 		66836A4A2AD6EACE00A61C51 /* SelectCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836A492AD6EACE00A61C51 /* SelectCountryView.swift */; };
 		66836A4D2AD6F42000A61C51 /* EnterPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836A4C2AD6F42000A61C51 /* EnterPhoneNumberView.swift */; };
+		66836A4F2AD6FE2800A61C51 /* EnterCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836A4E2AD6FE2800A61C51 /* EnterCodeView.swift */; };
 		668785E02AD02B0400070035 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668785DF2AD02B0400070035 /* EditProfileView.swift */; };
 		668785E42AD0373A00070035 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668785E32AD0373A00070035 /* Extensions.swift */; };
 		668CA24E2AD43CD500FD0D25 /* ChevronButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CA24D2AD43CD500FD0D25 /* ChevronButtonView.swift */; };
@@ -82,6 +83,7 @@
 		66836A472AD6CC9A00A61C51 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		66836A492AD6EACE00A61C51 /* SelectCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCountryView.swift; sourceTree = "<group>"; };
 		66836A4C2AD6F42000A61C51 /* EnterPhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberView.swift; sourceTree = "<group>"; };
+		66836A4E2AD6FE2800A61C51 /* EnterCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeView.swift; sourceTree = "<group>"; };
 		668785DF2AD02B0400070035 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		668785E32AD0373A00070035 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		668CA24D2AD43CD500FD0D25 /* ChevronButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChevronButtonView.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				66677E0C2AD5ADAE0010A13D /* EnterAgeView.swift */,
 				66836A492AD6EACE00A61C51 /* SelectCountryView.swift */,
 				66836A4C2AD6F42000A61C51 /* EnterPhoneNumberView.swift */,
+				66836A4E2AD6FE2800A61C51 /* EnterCodeView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				668785E02AD02B0400070035 /* EditProfileView.swift in Sources */,
 				66836A482AD6CC9A00A61C51 /* Country.swift in Sources */,
 				6669127A2AD2FA14007EF98A /* OtherView.swift in Sources */,
+				66836A4F2AD6FE2800A61C51 /* EnterCodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
