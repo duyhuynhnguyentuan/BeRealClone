@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SelectCountryView: View {
     var countries: [Country] = Country.allCountries
-    @State var chosenCountry: Country = Country(isoCode: "")
+    @Binding var chosenCountry: Country
     @Environment(\.dismiss) var dismiss
     var body: some View {
         VStack{
@@ -36,6 +36,7 @@ struct SelectCountryView: View {
                     Spacer()
                 }
                 .padding(.horizontal)
+               
                 VStack{
                     VStack{
                         List{
@@ -69,6 +70,6 @@ struct SelectCountryView: View {
     }
 }
 
-#Preview {
-    SelectCountryView()
-}
+//#Preview {
+//    SelectCountryView()
+//}
