@@ -10,6 +10,8 @@ import SwiftUI
 struct EnterNameView: View {
     @State var name = ""
     @State var buttonActive = false
+    @Binding var nameButtonClicked: Bool
+    @EnvironmentObject var viewModel: AuthenticationViewModel
     var body: some View {
         VStack{
             ZStack{
@@ -38,8 +40,9 @@ struct EnterNameView: View {
                             .overlay(
                                 TextField("", text: $name)
                                 //The multilineTextAlignment is used to set the alignment of the blueish thing when you click on the textfield
-                                    .multilineTextAlignment(.leading)
+                                    .multilineTextAlignment(.center)
                                     .font(.system(size: 40, weight: .heavy))
+                                    .foregroundColor(.white)
                             )
                     }.foregroundColor(.white)
                     Spacer()
@@ -47,21 +50,29 @@ struct EnterNameView: View {
                 .padding(.top, 50)
                 VStack{
                     Spacer()
-                    WhiteButtonView(buttonActive: $buttonActive, text: "Continue")
-                        .onChange(of: name){ newValue in
-                        if !newValue.isEmpty{
-                            buttonActive = true
+                    Button{
+                        if buttonActive {
+                            self.nameButtonClicked = true
                         }
-                        else if newValue.isEmpty {
-                            buttonActive = false
+                        
+                    }label: {
+                        WhiteButtonView(buttonActive: $buttonActive, text: "Continue")
+                            .onChange(of: name){ newValue in
+                            if !newValue.isEmpty{
+                                buttonActive = true
+                            }
+                            else if newValue.isEmpty {
+                                buttonActive = false
+                            }
                         }
                     }
+                  
                 }
             }
         }
     }
 }
 
-#Preview {
-    EnterNameView()
-}
+//#Preview {
+//    EnterNameView()
+//}

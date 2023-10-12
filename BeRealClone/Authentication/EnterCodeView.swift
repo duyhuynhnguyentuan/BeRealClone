@@ -13,6 +13,7 @@ struct EnterCodeView: View {
     @State var otpCode = ""
     @State var buttonActive = false
     @State var timeRemaining = 60
+    @EnvironmentObject var viewModel : AuthenticationViewModel
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack{
@@ -71,7 +72,7 @@ struct EnterCodeView: View {
                         Button{
                             
                         }label: {
-                            WhiteButtonView(buttonActive: $buttonActive, text: otpCode.count == 6 ? "Continue" : "Resend in ")
+                            WhiteButtonView(buttonActive: $buttonActive, text: otpCode.count == 6 ? "Continue" : "Resend in \(timeRemaining) ")
                         }.disabled(buttonActive ? false : true)
                             .onChange(of: otpCode){ newValue in
                                 if !newValue.isEmpty {
