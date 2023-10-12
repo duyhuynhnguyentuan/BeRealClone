@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct EnterPhoneNumberView: View {
-    @State var country = Country(isoCode: "US")
     @State var showCountryList = false
-    @State var phoneNumber = ""
     @State var buttonActive = false
     @Binding var phoneNumberButtonClicked: Bool
+    
     @EnvironmentObject var viewModel : AuthenticationViewModel
+    
+    
     var body: some View {
         VStack{
             ZStack{
@@ -41,9 +42,9 @@ struct EnterPhoneNumberView: View {
                             .frame(width: 75, height: 45)
                             .foregroundColor(.gray)
                             .overlay(
-                                Text("\(country.flag(country: country.isoCode))")
+                                Text("\(viewModel.country.flag(country: viewModel.country.isoCode))")
                                 +
-                                Text("+\(country.phoneCode)")
+                                Text("+\(viewModel.country.phoneCode)")
                                     .foregroundColor(.white)
                                     .font(.system(size: 12))
                                     .fontWeight(.bold)
@@ -53,12 +54,12 @@ struct EnterPhoneNumberView: View {
                                 self.showCountryList.toggle()
                             }
                         Text("Your phone")
-                            .foregroundColor(phoneNumber.isEmpty ? Color(red: 70/255, green: 70/255, blue: 73/255) : Color.black)
+                            .foregroundColor(viewModel.phoneNumber.isEmpty ? Color(red: 70/255, green: 70/255, blue: 73/255) : Color.black)
                             .fontWeight(.heavy)
                             .font(.system(size: 40))
                             .frame(width: 270)
                             .overlay(
-                                TextField("", text: $phoneNumber)
+                                TextField("", text: $viewModel.phoneNumber)
                                     .foregroundColor(.white)
                                     .font(.system(size: 40))
                                     .fontWeight(.heavy)
@@ -78,9 +79,10 @@ struct EnterPhoneNumberView: View {
                         .multilineTextAlignment(.center)
                     
                     Button{
-                        viewModel.sendOtp()
+                        Task {await viewModel.sendOtp()}
                     }label: {
-                        WhiteButtonView(buttonActive: $buttonActive, text: "Continue").onChange(of: phoneNumber){ newValue in
+                        WhiteButtonView(buttonActive: $buttonActive, text: "Continue")
+                            .onChange(of: viewModel.phoneNumber){ newValue in
                             if !newValue.isEmpty{
                                 buttonActive = true
                             }
@@ -89,16 +91,16 @@ struct EnterPhoneNumberView: View {
                             }
                         }
                     }
-                    .disabled(phoneNumber.isEmpty ? true : false)
+                    .disabled(viewModel.phoneNumber.isEmpty ? true : false)
                 }
             }
         }
         .sheet(isPresented: $showCountryList){
-            SelectCountryView(chosenCountry: $country)
+            SelectCountryView(chosenCountry: $viewModel.country)
         }
-//        .overlay(
-//        ProgressView()
-//        )
+        .overlay(
+            ProgressView(viewModel.isLoading ? 1 : 0)
+        )
         .background{
             NavigationLink(tag: "VERIFICATION", selection: $viewModel.navigationTag){
                 EnterCodeView().environmentObject(viewModel)

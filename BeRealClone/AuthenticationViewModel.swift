@@ -6,16 +6,42 @@
 //
 
 import SwiftUI
+import Firebase
 
 class AuthenticationViewModel: ObservableObject {
-       @Published var name = ""
+    @Published var name = ""
     @Published var year = Year(day: "", month: "", year: "")
-    @Published var country: Country = Country(isoCode: "VN")
+    @Published var country: Country = Country(isoCode: "US")
     @Published var phoneNumber = ""
     @Published var otpText = ""
     @Published var navigationTag: String?
-    func sendOtp(){
-        self.navigationTag = "VERIFICATION"
+    @Published var isLoading: Bool = false
+    @Published var verificationCode: String = ""
+    @Published var errorMessage = ""
+    @Published var showAlert = false
+    func sendOtp()async{
+        if isLoading{return}
+        
+        do{
+            isLoading = true
+            let result = try await PhoneAuthProvider.provider().verifyPhoneNumber("+\(country.phoneCode)\(phoneNumber)", uiDelegate: nil)
+            DispatchQueue.main.async {
+                self.isLoading = false
+                self.verificationCode = result
+                self.navigationTag = "VERIFICATION"
+            }
+        }catch{
+            handleError(error: error.localizedDescription)
+        }
+     
+    }
+    
+    func handleError(error: String){
+        DispatchQueue.main.async {
+            self.isLoading = false
+            self.errorMessage = error
+            self.showAlert.toggle()
+        }
     }
 }
 
