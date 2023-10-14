@@ -16,7 +16,7 @@ public struct Year {
         self.month = month
         self.year = year
     }
-    var dob: String {
+    var date: String {
         return "\(day)/\(month)/\(year)"
     }
 }

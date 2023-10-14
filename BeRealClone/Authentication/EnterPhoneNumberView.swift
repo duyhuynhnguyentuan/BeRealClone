@@ -2,7 +2,7 @@
 //  EnterPhoneNumberView.swift
 //  BeRealClone
 //
-//  Created by Duy Huỳnh Nguyễn Tuấn on 11/10/2023.
+//  Created by Duy Huỳnh Nguyễn Tuấn on 13/10/2023.
 //
 
 import SwiftUI
@@ -11,10 +11,7 @@ struct EnterPhoneNumberView: View {
     @State var showCountryList = false
     @State var buttonActive = false
     @Binding var phoneNumberButtonClicked: Bool
-    
     @EnvironmentObject var viewModel : AuthenticationViewModel
-    
-    
     var body: some View {
         VStack{
             ZStack{
@@ -99,19 +96,15 @@ struct EnterPhoneNumberView: View {
             SelectCountryView(chosenCountry: $viewModel.country)
         }
         .overlay(
-            ProgressView(viewModel.isLoading ? 1 : 0)
+            ProgressView().opacity(viewModel.isLoading ? 1 : 0)
         )
         .background{
             NavigationLink(tag: "VERIFICATION", selection: $viewModel.navigationTag){
                 EnterCodeView().environmentObject(viewModel)
-            } label: {
-            }
+            } label: {}
             .labelsHidden()
         }
         .environment(\.colorScheme, .dark)
     }
 }
 
-//#Preview {
-//    EnterPhoneNumberView()
-//}
