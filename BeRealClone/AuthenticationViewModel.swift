@@ -19,6 +19,11 @@ import Firebase
     @Published var verificationCode: String = ""
     @Published var errorMessage = ""
     @Published var showAlert = false
+    @Published var userSession: Firebase.User?
+    @Published var currentUser: User?
+    //for everywhere in the project be able to access the same view model, I declared a shared constant statically
+    static let shared = AuthenticationViewModel()
+    
     func sendOtp()async{
         if isLoading{return}
         
@@ -49,9 +54,22 @@ import Firebase
             isLoading = true
             let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationCode, verificationCode: otpText)
             let result = try await Auth.auth().signIn(with: credential)
+            //create firestone database to save users info
+            let db = Firestore.firestore()
+            //setData will store dictionary
+            db.collection("user").document(result.user.uid).setData([
+                "fullname": name,
+                "date": year.date,
+                "id": result.user.uid
+            ]) { err in
+                if let err = err {
+                    print(err.localizedDescription)
+                }
+            }
             DispatchQueue.main.async{
                 self.isLoading = false
                 let user = result.user
+                self.userSession = user
                 print(user.uid)
             }
         }catch{

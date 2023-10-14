@@ -16,7 +16,7 @@ struct BeRealCloneApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            MainAuthenticationView()
+            MainView().environmentObject(AuthenticationViewModel.shared)
         }
     }
 }

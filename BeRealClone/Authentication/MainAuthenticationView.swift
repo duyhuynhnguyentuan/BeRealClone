@@ -11,7 +11,7 @@ struct MainAuthenticationView: View {
     @State private var nameButtonClicked = false
     @State private var ageButtonClicked = false
     @State private var phoneNumberButtonClicked = false
-    @StateObject var viewModel = AuthenticationViewModel()
+    @EnvironmentObject var viewModel: AuthenticationViewModel
     var body: some View {
         NavigationView{
             if !nameButtonClicked {
