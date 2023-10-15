@@ -21,6 +21,10 @@ import Firebase
     @Published var showAlert = false
     @Published var userSession: Firebase.User?
     @Published var currentUser: User?
+    init(){
+        userSession = Auth.auth().currentUser
+        fetchUser()
+    }
     //for everywhere in the project be able to access the same view model, I declared a shared constant statically
     static let shared = AuthenticationViewModel()
     
@@ -75,6 +79,24 @@ import Firebase
         }catch{
             print("ERROR")
             handleError(error: error.localizedDescription)
+        }
+    }
+    func signOut(){
+        self.userSession = nil
+        try? Auth.auth().signOut()
+    }
+    /// The fetchUSer function is used to check if the user is already existed and remain the session
+    func fetchUser(){
+        //safely guard the constant if userSession?.uid doesn't exist then return and get out of the func
+        //The guard let statement is used to unwrap the optional userSession?.uid. If userSession is not nil, and uid is successfully unwrapped (meaning it has a non-nil value), the code inside the guard block will execute. If userSession is nil or uid is nil, the guard statement fails, and the code inside the else block (in this case, return) will execute.
+        guard let uid = userSession?.uid else {return}
+        Firestore.firestore().collection("user").document(uid).getDocument { snapshot, err in
+            if let err = err {
+                print(err.localizedDescription)
+                return
+            }
+            guard let user = try? snapshot?.data(as: User.self) else {return}
+            self.currentUser
         }
     }
 }

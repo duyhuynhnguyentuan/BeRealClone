@@ -11,7 +11,7 @@ struct MainView: View {
     @EnvironmentObject var viewModel: AuthenticationViewModel
     var body: some View {
         Group{
-            if viewModel.userSession == nil{
+            if viewModel.userSession == nil {
                 MainAuthenticationView()
             }else{
                 ContentView()

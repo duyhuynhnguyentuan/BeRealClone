@@ -82,6 +82,7 @@ struct EnterCodeView: View {
                                 }
                                 else if newValue.isEmpty {
                                     buttonActive = false
+                                    print(viewModel.phoneNumber)
                                 }
                             }
                     }
