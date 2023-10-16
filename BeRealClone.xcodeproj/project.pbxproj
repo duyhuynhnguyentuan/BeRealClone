@@ -263,8 +263,8 @@
 				66F7897E2AC91EAD00A266D7 /* BeRealClone.entitlements */,
 				66F7897F2AC91EAD00A266D7 /* Preview Content */,
 				66F789A52AC91FF100A266D7 /* FeedView.swift */,
-				668334B92AC97B2C00D4A820 /* FeedCell.swift */,
 				66788A872ACC7CD4004AB5A4 /* Profile.swift */,
+				668334B92AC97B2C00D4A820 /* FeedCell.swift */,
 				66681FD62ACDB92D001036E9 /* MemoryView.swift */,
 				668CA2552AD4589D00FD0D25 /* SettingsView */,
 				668CA24D2AD43CD500FD0D25 /* ChevronButtonView.swift */,
@@ -643,7 +643,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeRealClone/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TQKAT5B374;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BeRealClone/Info.plist;
@@ -682,7 +682,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeRealClone/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TQKAT5B374;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BeRealClone/Info.plist;

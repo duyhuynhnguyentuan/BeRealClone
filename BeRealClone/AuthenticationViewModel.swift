@@ -8,7 +8,7 @@
 import SwiftUI
 import Firebase
 
-/*@MainActor*/ class AuthenticationViewModel: ObservableObject {
+@MainActor class AuthenticationViewModel: ObservableObject {
     @Published var name = ""
     @Published var year = Year(day: "", month: "", year: "")
     @Published var country: Country = Country(isoCode: "US")
@@ -22,6 +22,7 @@ import Firebase
     @Published var userSession: Firebase.User?
     @Published var currentUser: User?
     init(){
+    
         userSession = Auth.auth().currentUser
         fetchUser()
     }
@@ -61,8 +62,8 @@ import Firebase
             //create firestone database to save users info
             let db = Firestore.firestore()
             //setData will store dictionary
-            db.collection("user").document(result.user.uid).setData([
-                "fullname": name,
+            db.collection("users").document(result.user.uid).setData([
+                "name": name,
                 "date": year.date,
                 "id": result.user.uid
             ]) { err in
@@ -70,10 +71,11 @@ import Firebase
                     print(err.localizedDescription)
                 }
             }
-            DispatchQueue.main.async{
+            DispatchQueue.main.async{ [self] in
                 self.isLoading = false
                 let user = result.user
                 self.userSession = user
+                self.currentUser = User(name: name, date: year.date)
                 print(user.uid)
             }
         }catch{
@@ -89,14 +91,25 @@ import Firebase
     func fetchUser(){
         //safely guard the constant if userSession?.uid doesn't exist then return and get out of the func
         //The guard let statement is used to unwrap the optional userSession?.uid. If userSession is not nil, and uid is successfully unwrapped (meaning it has a non-nil value), the code inside the guard block will execute. If userSession is nil or uid is nil, the guard statement fails, and the code inside the else block (in this case, return) will execute.
-        guard let uid = userSession?.uid else {return}
-        Firestore.firestore().collection("user").document(uid).getDocument { snapshot, err in
+        guard let uid = userSession?.uid else {
+            print("No found UID")
+           
+            
+            return
+        }
+        Firestore.firestore().collection("users").document(uid).getDocument { snapshot, err in
             if let err = err {
                 print(err.localizedDescription)
                 return
             }
-            guard let user = try? snapshot?.data(as: User.self) else {return}
-            self.currentUser
+            guard let user = try? snapshot?.data(as: User.self) else {
+                print("Cannot snapshot ")
+                self.userSession = nil
+                return
+            }
+            self.currentUser = user
+            print(user)
+            print("ERROR")
         }
     }
 }

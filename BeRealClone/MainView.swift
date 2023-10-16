@@ -14,7 +14,27 @@ struct MainView: View {
             if viewModel.userSession == nil {
                 MainAuthenticationView()
             }else{
-                ContentView()
+                if viewModel.currentUser != nil{
+                    ContentView()
+                }else{
+                    VStack{
+                        ZStack{
+                            Color.black.ignoresSafeArea()
+                            VStack{
+                                HStack{
+                                    Spacer()
+                                    Text("BeReal.")
+                                        .foregroundColor(.white)
+                                        .fontWeight(.bold)
+                                        .font(.system(size: 22))
+                                    Spacer()
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+                
             }
         }
         
