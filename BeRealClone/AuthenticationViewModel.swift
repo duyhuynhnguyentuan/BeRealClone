@@ -22,7 +22,10 @@ import Firebase
     @Published var userSession: Firebase.User?
     @Published var currentUser: User?
     init(){
-    
+        //the userSession is handled by firebase securely and is transparent to devs
+        //the below userSession using Auth.auth() is handle by Firebase so it basically just check the right current User
+        //When the first time download the app the verification has not been completed so there hadn't been a Firebase session yet
+        //the usersession is only authenticate the User var type 
         userSession = Auth.auth().currentUser
         fetchUser()
     }

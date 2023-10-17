@@ -16,7 +16,8 @@ struct MainView: View {
             }else{
                 if viewModel.currentUser != nil{
                     ContentView()
-                }else{
+                }
+                else{
                     VStack{
                         ZStack{
                             Color.black.ignoresSafeArea()

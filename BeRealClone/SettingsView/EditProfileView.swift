@@ -15,6 +15,7 @@ struct EditProfileView: View {
     @State var location = ""
     //@Environment(\.dismiss) is a property wrapper in SwiftUI that allows you to dismiss a view programmatically. It is used to dismiss a view that was presented modally using the sheet() modifier
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var viewModel: AuthenticationViewModel
     var body: some View {
         VStack{
             ZStack{
@@ -49,11 +50,20 @@ struct EditProfileView: View {
                 VStack{
                     VStack{
                         ZStack(alignment: .bottomTrailing){
-                            Image("dudu")
-                                .resizable()
-                                .scaledToFill()
+//                            Image("dudu")
+//                                .resizable()
+//                                .scaledToFill()
+//                                .frame(width: 120,height: 120)
+//                                .cornerRadius(60)
+                            Circle()
                                 .frame(width: 120,height: 120)
                                 .cornerRadius(60)
+                                .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
+                                .overlay(
+                                    Text(viewModel.currentUser!.name.prefix(1).uppercased())
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 55))
+                                )
                             ZStack{
                                 ZStack{
                                     Circle()

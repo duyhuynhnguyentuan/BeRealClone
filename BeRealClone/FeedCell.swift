@@ -47,7 +47,7 @@ struct FeedCell: View {
                                     .shadow(color: .black, radius: 3, x: 1, y: 1)
                                     .padding(.top,20)
                             }
-                            .padding(.trailing,20)
+                            .padding(.trailing,40)
                             .padding(.bottom, 70)
                         }
                     }

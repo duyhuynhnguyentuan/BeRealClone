@@ -10,6 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     @State var width = UIScreen.main.bounds.width
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var viewModel: AuthenticationViewModel
     var body: some View {
         NavigationView{
             VStack{
@@ -44,11 +45,20 @@ struct SettingsView: View {
                             .opacity(0.07)
                             .overlay(
                                 HStack{
-                                    Image("dudu")
-                                        .resizable()
-                                        .scaledToFill()
+//                                    Image("dudu")
+//                                        .resizable()
+//                                        .scaledToFill()
+//                                        .frame(width: 60, height: 60)
+//                                        .cornerRadius(30)
+                                    Circle()
                                         .frame(width: 60, height: 60)
                                         .cornerRadius(30)
+                                        .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
+                                        .overlay(
+                                            Text(viewModel.currentUser!.name.prefix(1).uppercased())
+                                                .foregroundColor(.white)
+                                                .font(.system(size: 25))
+                                        )
                                     VStack(alignment: .leading){
                                         Text("Matcha Huynh")
                                             .foregroundColor(.white)

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Profile: View {
     @Binding var mainMenu : String
+    @EnvironmentObject var viewModel: AuthenticationViewModel
     var body: some View {
         ZStack{
             Color.black.ignoresSafeArea()
@@ -38,11 +39,21 @@ struct Profile: View {
             Spacer()
             }
             VStack{
-                Image("dudu")
-                    .resizable()
-                    .scaledToFill()
+//                Image("dudu")
+//                    .resizable()
+//                    .scaledToFill()
+//                    .frame(width: 130, height: 130)
+//                    .cornerRadius(75)
+                Circle()
                     .frame(width: 130, height: 130)
                     .cornerRadius(75)
+                    .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
+                    .overlay(
+                        Text(viewModel.currentUser!.name.prefix(1).uppercased())
+                            .foregroundColor(.white)
+                            .font(.system(size: 55))
+                            
+                    )
                 Text("Matcha Huynh")
                     .font(.largeTitle)
                     .foregroundStyle(
