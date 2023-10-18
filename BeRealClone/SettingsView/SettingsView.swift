@@ -60,11 +60,12 @@ struct SettingsView: View {
                                                 .font(.system(size: 25))
                                         )
                                     VStack(alignment: .leading){
-                                        Text("Matcha Huynh")
+                                        Text(viewModel.currentUser!.name)
                                             .foregroundColor(.white)
                                             .fontWeight(.semibold)
                                             .font(.system(size: 18))
-                                        Text("matchacha")
+                                        //Coalesce using '??' to provide a default when the optional value contains 'nil'
+                                        Text(viewModel.currentUser!.username ?? viewModel.currentUser!.name.lowercased())
                                             .foregroundColor(.white)
                                             .fontWeight(.semibold)
                                             .font(.system(size: 14))

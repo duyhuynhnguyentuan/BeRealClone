@@ -57,7 +57,7 @@ import Firebase
             self.showAlert.toggle()
         }
     }
-    func verifyOtp()async{
+    func verifyOtp() async {
         do{
             isLoading = true
             let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationCode, verificationCode: otpText)
@@ -95,7 +95,7 @@ import Firebase
         //safely guard the constant if userSession?.uid doesn't exist then return and get out of the func
         //The guard let statement is used to unwrap the optional userSession?.uid. If userSession is not nil, and uid is successfully unwrapped (meaning it has a non-nil value), the code inside the guard block will execute. If userSession is nil or uid is nil, the guard statement fails, and the code inside the else block (in this case, return) will execute.
         guard let uid = userSession?.uid else {
-            print("No found UID")
+            print("No found UID while fetching user")
            
             
             return
@@ -106,13 +106,22 @@ import Firebase
                 return
             }
             guard let user = try? snapshot?.data(as: User.self) else {
-                print("Cannot snapshot ")
+                print("Cannot snapshot")
                 self.userSession = nil
                 return
             }
             self.currentUser = user
             print(user)
             print("ERROR")
+        }
+    }
+    /// saveUserData with the parameter data of type dictionary and is a async function
+    func saveUserData(data: [String: Any]) async {
+        guard let userID = userSession?.uid else {return}
+        do{
+           try await Firestore.firestore().collection("users").document(userID).updateData(data as [String: Any])
+        }catch{
+            handleError(error: error.localizedDescription)
         }
     }
 }

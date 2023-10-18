@@ -43,7 +43,8 @@ struct EditProfileView: View {
                             }
                             Spacer()
                             Button{
-                                saveData()
+                                //Task is used to handle asynchronus func
+                                Task{ await saveData() }
                                 dismiss()
                             }label: {
                                 Text("Save")
@@ -127,7 +128,8 @@ struct EditProfileView: View {
                                                     endPoint: .trailing
                                                 )
                                             )
-                                            .opacity(0.7)                                    }
+                                            .opacity(0.7)                                 
+                                    }
                                     .foregroundColor(.white)
                                     .padding(.leading, width * 0.05)
                                 Spacer()
@@ -184,7 +186,7 @@ struct EditProfileView: View {
                                     .overlay(
                                         VStack{
                                             HStack{
-                                                if bio.isEmpty {
+                                                if currentUser.bio == "" {
                                                     Text("Bio")
                                                         .foregroundColor(.gray)
                                                         .font(.system(size: 16))
@@ -236,9 +238,22 @@ struct EditProfileView: View {
             }
         }
     }
-    func saveData(){
+    func saveData() async {
         if viewModel.currentUser!.name != self.fullname && !self.fullname.isEmpty {
             viewModel.currentUser!.name = self.fullname
+             await viewModel.saveUserData(data: ["name": self.fullname])
+        }
+        if viewModel.currentUser!.username != self.username && !self.username.isEmpty {
+            viewModel.currentUser!.username = self.username
+            await viewModel.saveUserData(data: ["username" : self.username])
+        }
+        if viewModel.currentUser!.bio != self.bio && !self.bio.isEmpty {
+            viewModel.currentUser!.bio = self.bio
+            await viewModel.saveUserData(data: ["bio" : self.bio])
+        }
+        if viewModel.currentUser!.location != self.location && !self.location.isEmpty {
+            viewModel.currentUser!.location = self.location
+            await viewModel.saveUserData(data: ["location" : self.location])
         }
     }
 }

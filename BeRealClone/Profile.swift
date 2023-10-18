@@ -54,7 +54,7 @@ struct Profile: View {
                             .font(.system(size: 55))
                             
                     )
-                Text("Matcha Huynh")
+                Text(viewModel.currentUser!.name)
                     .font(.largeTitle)
                     .foregroundStyle(
                         .linearGradient(
@@ -62,7 +62,7 @@ struct Profile: View {
                             endPoint: .trailing
                         )
                     )
-                Text("@matchacha")
+                Text("@\(viewModel.currentUser!.username ?? viewModel.currentUser!.name.lowercased())")
                     .foregroundColor(.white)
                     .fontWeight(.semibold)
                 HStack{
