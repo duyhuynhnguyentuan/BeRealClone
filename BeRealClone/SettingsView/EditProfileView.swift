@@ -8,12 +8,24 @@
 import SwiftUI
 
 struct EditProfileView: View {
+    //@State :  SwiftUI is responsible for updating the state and ensuring the views are re-rendered appropriately when these properties change
     @State var width = UIScreen.main.bounds.width
-    @State var fullname = ""
-    @State var username = ""
-    @State var bio = ""
-    @State var location = ""
+    @State var fullname: String
+    @State var username: String
+    @State var bio: String
+    @State var location: String
     //@Environment(\.dismiss) is a property wrapper in SwiftUI that allows you to dismiss a view programmatically. It is used to dismiss a view that was presented modally using the sheet() modifier
+    let currentUser: User
+        //The underscore allows you to create a two-way binding between the state variable and the UI. When you pass a state variable with an underscore to a child view, you are essentially passing a binding to the child view. This binding enables the child view to read and modify the state variable.
+    init(currentUser: User){
+        self.currentUser = currentUser
+        self._fullname = State(initialValue: currentUser.name)
+        self._bio = State(initialValue: currentUser.bio ?? "")
+        //the ?? means that if the var that is optional is not used then it would be empty
+        self._username = State(initialValue: currentUser.username ?? "")
+        self._location = State(initialValue: currentUser.location ?? "")
+    }
+    
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: AuthenticationViewModel
     var body: some View {
@@ -30,8 +42,14 @@ struct EditProfileView: View {
                                     .foregroundColor(.white)
                             }
                             Spacer()
-                            Text("Save")
-                                .foregroundColor(.gray)
+                            Button{
+                                saveData()
+                                dismiss()
+                            }label: {
+                                Text("Save")
+                                    .foregroundColor(.gray)
+                            
+                            }
                         }
                         .padding(.horizontal, width * 0.05)
                         Text("Edit profile")
@@ -102,7 +120,7 @@ struct EditProfileView: View {
                                 TextField("", text: $fullname)
                                     .font(.system(size: 16))
                                     .placeholder(when: fullname.isEmpty){
-                                        Text("Matcha Huynh")
+                                        Text(viewModel.currentUser!.name)
                                             .foregroundStyle(
                                                 .linearGradient(
                                                     colors: [.purple, .blue], startPoint: .leading,
@@ -218,8 +236,13 @@ struct EditProfileView: View {
             }
         }
     }
+    func saveData(){
+        if viewModel.currentUser!.name != self.fullname && !self.fullname.isEmpty {
+            viewModel.currentUser!.name = self.fullname
+        }
+    }
 }
-
-#Preview {
-    EditProfileView()
-}
+//
+//#Preview {
+//    EditProfileView()
+//}

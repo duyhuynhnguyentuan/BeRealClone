@@ -37,7 +37,7 @@ struct SettingsView: View {
                 }
                 VStack{
                     NavigationLink{
-                        EditProfileView().navigationBarBackButtonHidden()
+                        EditProfileView(currentUser: viewModel.currentUser! ).navigationBarBackButtonHidden()
                     } label: {
                         RoundedRectangle(cornerRadius: 16)
                             .frame(width: UIScreen.main.bounds.width * 0.9, height: 90)
