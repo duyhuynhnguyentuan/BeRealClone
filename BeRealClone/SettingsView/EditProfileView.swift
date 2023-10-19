@@ -152,7 +152,7 @@ struct EditProfileView: View {
                                 TextField("", text: $username)
                                     .font(.system(size: 16))
                                     .placeholder(when: username.isEmpty){
-                                        Text("matchacha")
+                                        Text(viewModel.currentUser!.username ?? viewModel.currentUser!.name.uppercased())
                                             .foregroundColor(.white)
                                             .font(.system(size: 16))
                                     }
