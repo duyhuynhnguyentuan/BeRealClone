@@ -28,6 +28,7 @@ struct EditProfileView: View {
     
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: AuthenticationViewModel
+    @State var imagePickerPresented = false
     var body: some View {
         VStack{
             ZStack{
@@ -68,37 +69,41 @@ struct EditProfileView: View {
                 }
                 VStack{
                     VStack{
-                        ZStack(alignment: .bottomTrailing){
-//                            Image("dudu")
-//                                .resizable()
-//                                .scaledToFill()
-//                                .frame(width: 120,height: 120)
-//                                .cornerRadius(60)
-                            Circle()
-                                .frame(width: 120,height: 120)
-                                .cornerRadius(60)
-                                .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
-                                .overlay(
-                                    Text(viewModel.currentUser!.name.prefix(1).uppercased())
-                                        .foregroundColor(.white)
-                                        .font(.system(size: 55))
-                                )
-                            ZStack{
+                        Button{
+                            
+                        }label: {
+                            ZStack(alignment: .bottomTrailing){
+    //                            Image("dudu")
+    //                                .resizable()
+    //                                .scaledToFill()
+    //                                .frame(width: 120,height: 120)
+    //                                .cornerRadius(60)
+                                Circle()
+                                    .frame(width: 120,height: 120)
+                                    .cornerRadius(60)
+                                    .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
+                                    .overlay(
+                                        Text(viewModel.currentUser!.name.prefix(1).uppercased())
+                                            .foregroundColor(.white)
+                                            .font(.system(size: 55))
+                                    )
                                 ZStack{
-                                    Circle()
-                                        .frame(width: 34, height: 34)
-                                        .foregroundColor(.black)
-                                    Circle()
-                                        .frame(width: 30, height: 30)
-                                        .foregroundColor(.white)
-                                    Circle()
-                                        .frame(width: 30, height: 30)
-                                        .foregroundColor(.black)
-                                        .opacity(0.1)
+                                    ZStack{
+                                        Circle()
+                                            .frame(width: 34, height: 34)
+                                            .foregroundColor(.black)
+                                        Circle()
+                                            .frame(width: 30, height: 30)
+                                            .foregroundColor(.white)
+                                        Circle()
+                                            .frame(width: 30, height: 30)
+                                            .foregroundColor(.black)
+                                            .opacity(0.1)
+                                    }
+                                    Image(systemName: "camera.fill")
+                                        .font(.system(size: 16))
+                                        .shadow(color: .white ,radius: 1, x: 1, y: 1)
                                 }
-                                Image(systemName: "camera.fill")
-                                    .font(.system(size: 16))
-                                    .shadow(color: .white ,radius: 1, x: 1, y: 1)
                             }
                         }
                             
