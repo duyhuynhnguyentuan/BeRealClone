@@ -275,6 +275,19 @@ struct EditProfileView: View {
             viewModel.currentUser!.location = self.location
             await viewModel.saveUserData(data: ["location" : self.location])
         }
+        if selectedImage != nil {
+            viewModel.uploadProfileImage(image: selectedImage!) { url in
+                do{
+                    Task{
+                        viewModel.currentUser!.profileImageUrl = url
+                        await viewModel.saveUserData(data: ["profileImageUrl" : url])
+                    }
+                }
+                catch{
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
     func loadImage(){
         guard let selectedImage = selectedImage else {return}
