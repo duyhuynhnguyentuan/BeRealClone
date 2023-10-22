@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Kingfisher
 struct SettingsView: View {
     @State var width = UIScreen.main.bounds.width
     @Environment(\.dismiss) var dismiss
@@ -50,15 +50,23 @@ struct SettingsView: View {
 //                                        .scaledToFill()
 //                                        .frame(width: 60, height: 60)
 //                                        .cornerRadius(30)
-                                    Circle()
-                                        .frame(width: 60, height: 60)
-                                        .cornerRadius(30)
-                                        .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
-                                        .overlay(
-                                            Text(viewModel.currentUser!.name.prefix(1).uppercased())
-                                                .foregroundColor(.white)
-                                                .font(.system(size: 25))
-                                        )
+                                    if let profileImageUrl = viewModel.currentUser!.profileImageUrl{
+                                        KFImage(URL(string: profileImageUrl))
+                                            .resizable()
+                                            .frame(width: 60, height: 60)
+                                            .cornerRadius(30)
+                                    }
+                                    else{
+                                        Circle()
+                                            .frame(width: 60, height: 60)
+                                            .cornerRadius(30)
+                                            .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
+                                            .overlay(
+                                                Text(viewModel.currentUser!.name.prefix(1).uppercased())
+                                                    .foregroundColor(.white)
+                                                    .font(.system(size: 25))
+                                            )
+                                    }
                                     VStack(alignment: .leading){
                                         Text(viewModel.currentUser!.name)
                                             .foregroundColor(.white)

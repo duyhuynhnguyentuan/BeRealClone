@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct EditProfileView: View {
     //@State :  SwiftUI is responsible for updating the state and ensuring the views are re-rendered appropriately when these properties change
@@ -80,7 +81,15 @@ struct EditProfileView: View {
     //                                .scaledToFill()
     //                                .frame(width: 120,height: 120)
     //                                .cornerRadius(60)
-                                if let image = profileImage {
+                                if currentUser.profileImageUrl != nil && profileImage == nil {
+                                    if let profileImageUrl = currentUser.profileImageUrl {
+                                        KFImage(URL(string: profileImageUrl))
+                                            .resizable()
+                                            .frame(width: 120, height: 120)
+                                            .cornerRadius(60)
+                                    }
+                                }
+                                else if let image = profileImage {
                                     image
                                         .resizable()
                                         .frame(width: 120, height: 120)
