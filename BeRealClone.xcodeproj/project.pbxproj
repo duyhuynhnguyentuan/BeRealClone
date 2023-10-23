@@ -172,7 +172,8 @@
 		66788A842ACC73AF004AB5A4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				66788A852ACC73CB004AB5A4 /* ThreeDots.swift */,
+				663514C12AE2D2CC00C38E3A /* ImagePicker.swift */,
+				66B31A752AE1785200A31FF4 /* ImageUploader.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -194,6 +195,8 @@
 		6678B9312AD1649E005F8A8E /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				668CA24D2AD43CD500FD0D25 /* ChevronButtonView.swift */,
+				66788A852ACC73CB004AB5A4 /* ThreeDots.swift */,
 				6678B9322AD164BD005F8A8E /* SearchBar.swift */,
 				668D6B2F2AD553F20075780F /* WhiteButtonView.swift */,
 			);
@@ -217,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				668785E32AD0373A00070035 /* Extensions.swift */,
-				663514C12AE2D2CC00C38E3A /* ImagePicker.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,6 +238,51 @@
 				668D6B2D2AD54D7B0075780F /* NotificationsButtonView.swift */,
 			);
 			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		668CFC862AE62FA200F897C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				66836A472AD6CC9A00A61C51 /* Country.swift */,
+				667B303F2AD7BDFB008BC54B /* Year.swift */,
+				6695F9D62ADADDB0008292DC /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		668CFC872AE62FDD00F897C6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				667B303D2AD7BCA6008BC54B /* AuthenticationViewModel.swift */,
+				668CFC842AE6270200F897C6 /* CameraViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		668CFC882AE6312E00F897C6 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				66F789A52AC91FF100A266D7 /* FeedView.swift */,
+				668334B92AC97B2C00D4A820 /* FeedCell.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		668CFC892AE632A800F897C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6678B9312AD1649E005F8A8E /* Items */,
+				6678B92C2AD16098005F8A8E /* LeftMenu */,
+				66F7897A2AC91EAD00A266D7 /* ContentView.swift */,
+				668CFC882AE6312E00F897C6 /* Feed */,
+				66788A872ACC7CD4004AB5A4 /* Profile.swift */,
+				66681FD62ACDB92D001036E9 /* MemoryView.swift */,
+				668CA2552AD4589D00FD0D25 /* SettingsView */,
+				66836A4B2AD6F3D400A61C51 /* Authentication */,
+				6695F9D82ADAE591008292DC /* MainView.swift */,
+				667843A12AE5629600CD801F /* CameraView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		66F7896C2AC91EAC00A266D7 = {
@@ -261,33 +308,18 @@
 		66F789772AC91EAD00A266D7 /* BeRealClone */ = {
 			isa = PBXGroup;
 			children = (
+				66F789782AC91EAD00A266D7 /* BeRealCloneApp.swift */,
 				660934892AD98F5F0049993C /* Info.plist */,
 				660934872AD98EAF0049993C /* GoogleService-Info.plist */,
 				66836A452AD6CC1300A61C51 /* countries.json */,
-				6678B9312AD1649E005F8A8E /* Items */,
-				6678B92C2AD16098005F8A8E /* LeftMenu */,
+				668CFC892AE632A800F897C6 /* View */,
 				668785E22AD0372200070035 /* Extensions */,
 				66788A842ACC73AF004AB5A4 /* Helpers */,
-				66F789782AC91EAD00A266D7 /* BeRealCloneApp.swift */,
-				66F7897A2AC91EAD00A266D7 /* ContentView.swift */,
 				66F7897C2AC91EAD00A266D7 /* Assets.xcassets */,
 				66F7897E2AC91EAD00A266D7 /* BeRealClone.entitlements */,
 				66F7897F2AC91EAD00A266D7 /* Preview Content */,
-				66F789A52AC91FF100A266D7 /* FeedView.swift */,
-				66788A872ACC7CD4004AB5A4 /* Profile.swift */,
-				668334B92AC97B2C00D4A820 /* FeedCell.swift */,
-				66681FD62ACDB92D001036E9 /* MemoryView.swift */,
-				668CA2552AD4589D00FD0D25 /* SettingsView */,
-				668CA24D2AD43CD500FD0D25 /* ChevronButtonView.swift */,
-				66836A4B2AD6F3D400A61C51 /* Authentication */,
-				66836A472AD6CC9A00A61C51 /* Country.swift */,
-				667B303D2AD7BCA6008BC54B /* AuthenticationViewModel.swift */,
-				667B303F2AD7BDFB008BC54B /* Year.swift */,
-				6695F9D62ADADDB0008292DC /* User.swift */,
-				6695F9D82ADAE591008292DC /* MainView.swift */,
-				66B31A752AE1785200A31FF4 /* ImageUploader.swift */,
-				667843A12AE5629600CD801F /* CameraView.swift */,
-				668CFC842AE6270200F897C6 /* CameraViewModel.swift */,
+				668CFC862AE62FA200F897C6 /* Model */,
+				668CFC872AE62FDD00F897C6 /* ViewModel */,
 			);
 			path = BeRealClone;
 			sourceTree = "<group>";
