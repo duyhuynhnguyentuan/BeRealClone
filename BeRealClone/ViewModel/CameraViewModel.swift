@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 import FirebaseFirestore
 
-class CameraViewModel: ObservableObject {
+ class CameraViewModel: ObservableObject {
     @Published var user: User
     
     init(user: User) {

@@ -8,7 +8,7 @@
 import SwiftUI
 import Firebase
 
-@MainActor class AuthenticationViewModel: ObservableObject {
+class AuthenticationViewModel: ObservableObject {
     @Published var name = ""
     @Published var year = Year(day: "", month: "", year: "")
     @Published var country: Country = Country(isoCode: "US")
