@@ -17,4 +17,8 @@ struct User: Decodable, Identifiable{
     var date: String
     var bio: String?
     var location: String?
+    var phone: String
+    var isCurrentUser: Bool{
+        return AuthenticationViewModel.shared.userSession?.uid == id
+    }
 }

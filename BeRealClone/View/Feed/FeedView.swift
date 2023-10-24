@@ -23,46 +23,60 @@ struct FeedView: View {
                 ZStack{
                     ScrollView{
                         VStack{
-                            VStack{
-                                ZStack{
-                                    VStack(alignment:.leading){
-                                        Image("back")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .cornerRadius(5)
+                            if !feedModel.blur {
+                                VStack{
+                                    VStack{
+                                        ZStack{
+                                            VStack(alignment:.leading){
+                                                
+                                                KFImage(URL(string: feedModel.bereal.backImageUrl))
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .cornerRadius(5)
+                                            }
+                                            VStack{
+                                                HStack{
+                                                    KFImage(URL(string: feedModel.bereal.frontImageUrl))
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                        .border(.black)
+                                                        .cornerRadius(2)
+                                                        .frame(width: 20, height: 40)
+                                                        .padding(.leading,5)
+                                                        .padding(.bottom,80)
+                                                    Spacer()
+                                                }
+                                            }
+                                        }.frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
                                     }
                                     VStack{
+                                        Text("Add a caption...")
+                                            .foregroundColor(.white)
+                                            .fontWeight(.semibold)
+                                        Text("View comment")
+                                            .foregroundColor(.gray)
                                         HStack{
-                                            Image("front")
-                                                .resizable()
-                                                .scaledToFit()
-                                                .border(.black)
-                                                .cornerRadius(2)
-                                                .frame(width: 20, height: 40)
-                                                .padding(.leading,5)
-                                                .padding(.bottom,80)
-                                            Spacer()
+                                            Text("Dong Xoai, Binh Phuoc • 1 hr late")
+                                                .foregroundColor(.gray)
+                                                .font(.system(size: 12))
+                                            ThreeDots(size: 3, color: .gray)
                                         }
                                     }
-                                }.frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                            }
-                            VStack{
-                                Text("Add a caption...")
-                                    .foregroundColor(.white)
-                                    .fontWeight(.semibold)
-                                Text("View comment")
-                                    .foregroundColor(.gray)
-                                HStack{
-                                    Text("Dong Xoai, Binh Phuoc • 1 hr late")
-                                        .foregroundColor(.gray)
-                                        .font(.system(size: 12))
-                                    ThreeDots(size: 3, color: .gray)
+
                                 }
                             }
                             ForEach(self.feedModel.bereals, id: \.backImageUrl ){ bereal in
-                                FeedCell()
+                                FeedCell(bereal: bereal, blur: feedModel.blur, viewModel: FeedCellViewModel(beReal: bereal))
                                     .onAppear{
-                                        print("Bereal: \(bereal.username)")
+                                        guard let userId = AuthenticationViewModel.shared.currentUser?.id else {return}
+                                        if(self.feedModel.blur == true){
+                                            if (bereal.userId == userId) {
+                                                self.feedModel.blur = false
+                                            }
+                                            else{
+                                                self.feedModel.blur = true
+                                            }
+                                        }
                                     }
                             }
                         }
@@ -122,30 +136,32 @@ struct FeedView: View {
                    
                         Spacer()
                         
-                        HStack{
-                            VStack{
-                                Image(systemName: "circle")
-                                    .font(.system(size: 80))
-                                Text("Post a late BeReal.")
-                                    .font(.system(size: 14))
-                                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                            }
-                            .foregroundColor(.white)
-                            .padding(.bottom, 12)
-                            .onTapGesture {
-                                self.cameraViewPresented.toggle()
+                        if feedModel.blur {
+                            HStack{
+                                VStack{
+                                    Image(systemName: "circle")
+                                        .font(.system(size: 80))
+                                    Text("Post a late BeReal.")
+                                        .font(.system(size: 14))
+                                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                }
+                                .foregroundColor(.white)
+                                .padding(.bottom, 12)
+                                .onTapGesture {
+                                    self.cameraViewPresented.toggle()
+                                }
                             }
                         }
-                    }
+                    }.shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.2), radius: 2, x:1, y:1)
                 }
-                .onAppear{
-                    KingfisherManager.shared.cache.clearMemoryCache()
-                }
-            }.fullScreenCover(isPresented: $cameraViewPresented) {
                 
-            } content: {
-                CameraView(viewModel: CameraViewModel(user: AuthenticationViewModel.shared.currentUser!))
+            }.onAppear{
+                KingfisherManager.shared.cache.clearMemoryCache()
             }
+        }.fullScreenCover(isPresented: $cameraViewPresented) {
+            
+        } content: {
+            CameraView(viewModel: CameraViewModel(user: AuthenticationViewModel.shared.currentUser!))
         }
     }
 }

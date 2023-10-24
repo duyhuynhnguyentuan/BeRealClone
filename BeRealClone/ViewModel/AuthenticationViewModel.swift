@@ -68,7 +68,8 @@ class AuthenticationViewModel: ObservableObject {
             db.collection("users").document(result.user.uid).setData([
                 "name": name,
                 "date": year.date,
-                "id": result.user.uid
+                "id": result.user.uid,
+                "phone": "+\(country.phoneCode)\(phoneNumber)"
             ]) { err in
                 if let err = err {
                     print(err.localizedDescription)
@@ -78,7 +79,7 @@ class AuthenticationViewModel: ObservableObject {
                 self.isLoading = false
                 let user = result.user
                 self.userSession = user
-                self.currentUser = User(name: name, date: year.date)
+                self.currentUser = User(name: name, date: year.date, phone: "+\(country.phoneCode)\(phoneNumber)")
                 print(user.uid)
             }
         }catch{
